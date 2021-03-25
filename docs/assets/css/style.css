@@ -2074,6 +2074,7 @@ button {
 @media (max-width: 500px) {
     .footer__item-contact {
         width: 100%;
+        text-align: center;
     }
 }
 
