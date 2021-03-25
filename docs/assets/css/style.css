@@ -2400,6 +2400,7 @@ button {
     bottom: 7px;
     left: 0;
     right: 0;
+    padding: 0;
 }
 
 @media (max-width: 550px) {
