@@ -1,0 +1,59 @@
+.burger {
+  width: 30px;
+  height: 16px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 8px);
+  outline: none;
+  z-index: 102;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  span {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    transform: scale(1);
+    transition: transform 0.3s;
+  }
+
+  @media (min-width: 767px) {
+    display: none;
+  }
+
+  &.active {
+
+    span {
+      transform: scale(0);
+      transition: transform 0.3s;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 50%;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+      top: 50%;
+    }
+  }
+}

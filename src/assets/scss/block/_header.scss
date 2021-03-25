@@ -1,0 +1,104 @@
+.header {
+  background-color: #000;
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  .container {
+    height: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    @media (max-width: 767px){
+      position: relative;
+    }
+  }
+
+  &__logo {
+    max-width: 85px;
+
+    @media (max-width: 992px) {
+      max-width: 70px;
+    }
+  }
+
+  &__menu {
+    nav {
+      @media (max-width: 767px){
+        position: absolute;
+        top: 0;
+        left: -10px;
+        transform: translateX(-100%);
+        overflow: hidden;
+        background: rgba(#000, 0.95);
+        padding: 15px;
+        width: 100vw;
+        height: 100vh;
+        ul {
+          display: block;
+          z-index: 101;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+        }
+      }
+    }
+    ul {
+      display: flex;
+    }
+
+    li+li {
+      margin-left: 40px;
+
+      @media (max-width: 1250px) {
+        margin-left: 20px;
+      }
+      @media (max-width: 767px){
+        margin-left: 0;
+      }
+    }
+
+    a {
+      font-size: 16px;
+      color: #fff;
+
+      &:hover {
+        color: #B5EAF8;
+        transition: color $transition;
+      }
+
+      @media (max-width: 1200px) {
+        font-size: 12px;
+      }
+      @media (max-width: 767px) {
+        padding: 10px 10px;
+        font-size: 18px;
+      }
+    }
+    @media (max-width: 767px){
+      order: 3;
+      width: 70px;
+    }
+  }
+
+  &__phone {
+    @media (max-width: 992px) {
+      display: none;
+    }
+    @media (max-width: 767px){
+      display: block;
+      order: 2;
+    }
+  }
+}
+
+.burger.active + nav {
+  transform: translateX(0);
+  transition: transform 0.3s;
+}

@@ -1,0 +1,29 @@
+@import './plugins/normalize';
+@import '../../../node_modules/swiper/swiper-bundle';
+
+// ------ fonts ------ //
+@import '../fonts/rubik/rubik';
+@import '../fonts/marckscript/marckscript';
+
+// ------ system ------ //
+@import 'system/variables';
+@import 'system/mixins';
+@import 'system/global';
+
+
+
+// ------ UI ------ //
+@import 'block/phone';
+@import 'block/button';
+@import 'block/logo';
+@import 'block/burger';
+@import 'block/popup';
+
+// ------ blocks ------ //
+@import 'block/header';
+@import 'block/footer';
+@import 'block/hero';
+@import 'block/about';
+@import 'block/programs';
+@import 'block/usp';
+

@@ -1,0 +1,158 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  min-width: 320px;
+  height: 100%;
+  @include ffamily(400);
+  font-size: 18px;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+a,
+select,
+input,
+label,
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media (max-width: 1200px){
+    max-width: 970px;
+  }
+  @media (max-width: 992px){
+    max-width: 750px;
+    padding: 0 10px;
+  }
+  @media (max-width: 767px){
+    max-width: none;
+  }
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track{
+  display: flex;
+}
+
+
+
+.title {
+
+  @include ffamily(500);
+  font-size: 36px;
+  padding: 0px 0px 5px 0px;
+  margin: 0px 0px 30px 0px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: $text;
+  }
+}
+
+.bg {
+  position: relative;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  @include object-fit(cover, center);
+  width: 100%;
+}
+
+.text-dark {
+  color: $text;
+}
+
+
+
+//обрезание текста из нескольких строк
+// .card-description {
+//   overflow: hidden;
+//   display: -webkit-box;
+//   -webkit-box-orient: vertical;
+//   -webkit-line-clamp: 3;
+//   }
+
+////----------запрет выделения текста
+// .noSelect {
+// -webkit-touch-callout: none;
+// -webkit-user-select: none;
+// -khtml-user-select: none;
+// -moz-user-select: none;
+// -ms-user-select: none;
+// user-select: none;
+// }

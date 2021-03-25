@@ -1,0 +1,91 @@
+.usp {
+  margin: 40px 0;
+  overflow: hidden;
+  &__inner {
+    display: flex;
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+  }
+
+  &__left {
+    padding-right: 195px;
+    margin-top: 110px;
+    @media (max-width: 992px){
+      width: 100%;
+      padding-right: 0;
+      margin-top: 0;
+    }
+  }
+
+  &__right {
+    position: relative;
+    padding: 40px 0px 70px 40px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50vw;
+      height: 100%;
+      background: $color-bg;
+    }
+    @media (max-width: 992px){
+      display: none;
+    }
+  }
+
+  &__left-item {
+    margin-bottom: 50px;
+    max-width: 410px;
+
+    &:last-child {
+      .usp__text {
+        font-size: 18px;
+      }
+    }
+    @media (max-width: 992px){
+      max-width: none;
+    }
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    color: $text;
+    font-weight: 400;
+    margin-bottom: 25px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    color: #828282;
+    @include ffamily(300);
+
+    p+p {
+      margin-top: 40px;
+    }
+    @media (max-width: 992px){
+      font-size: 18px;
+    }
+  }
+
+  &__btn {
+    max-width: 170px;
+    margin-top: 30px;
+    font-size: 14px;
+    .btn {
+      padding: 10px 5px;
+    }
+  }
+
+  &__img {
+    width: calc(50vw - 40px);
+    height: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+.phone a{
+  font-weight: 500;
+  color: #fff;
+  font-size: 16px;
+  &:hover {
+    color: #B5EAF8;
+    transition: color $transition;
+  }
+  @media (max-width: 1200px) {
+    font-size: 12px;
+  }
+}
